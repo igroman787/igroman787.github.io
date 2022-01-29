@@ -239,12 +239,12 @@
       "shard": -9223372036854775808
     },
     "init_block": {
-      "file_hash": "XiNAqxdY3/SPIGXm2n9L3iE7tsrCFPhuVjKvbGhO/DU=",
-      "seqno": 7862848,
-      "root_hash": "fRrnIOru5W+UxHUTEnV/IDG0DTo8WSMVwdvn0t6+u74=",
+      "root_hash": "ad3jVelMqbO9RQrysux2YH5K2zzy/4nGFQjCYNrKweI=",
+      "seqno": 8005911,
+      "file_hash": "YuX3PXD8TKCKSWfxKHmDoR8X6c1xaRDH7Vfw6SS6uBw=",
       "workchain": -1,
       "shard": -9223372036854775808
-    },
+},
     "hardforks": [
       {
         "file_hash": "x97xobbkPDggz7/u6KQzlT3pBmM5XfGE6vN7AiuTMU0=",
