@@ -1038,7 +1038,7 @@
     "@type": "validator.config.global",
     "zero_state": {
       "workchain": -1,
-      "shard": -9223372036854776000,
+      "shard": -9223372036854775808,
       "seqno": 0,
       "root_hash": "F6OpKZKqvqeFp6CQmFomXNMfMj2EnaUSOXN+Mh+wVWk=",
       "file_hash": "XplPz01CXAps5qeSWUtxcyBfdAo5zVb1N979KLSKD24="
@@ -1048,7 +1048,7 @@
       "seqno": 17926349,
       "file_hash": "AiRR/5bm1DL0vvOOmtwy5rapRBE1DxswjcC3hAUlUr8=",
       "workchain": -1,
-      "shard": -9223372036854776000
+      "shard": -9223372036854775808
     },
     "hardforks": [
       {
@@ -1056,7 +1056,7 @@
         "seqno": 8536841,
         "root_hash": "08Kpc9XxrMKC6BF/FeNHPS3MEL1/Vi/fQU/C9ELUrkc=",
         "workchain": -1,
-        "shard": -9223372036854776000
+        "shard": -9223372036854775808
       }
     ]
   }
