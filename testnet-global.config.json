@@ -239,9 +239,9 @@
       "shard": -9223372036854775808
     },
     "init_block": {
-      "root_hash": "WmNbbXx1f03nx6G0ExGwFcx+kAToHKZOhZE9q9akRU8=",
-      "seqno": 8959909,
-      "file_hash": "TxzVEzTXAYlu1buHlRJ6rv4O14S80AGH6KjDtP9jQgs=",
+      "root_hash": "Nm01pGsFmY4/dEINj8cR/NhEqkcGrzKHIBO94A61zlQ=",
+      "seqno": 10509658,
+      "file_hash": "qZd7EdihmKuc9IGTmZi1BqIR1o/Ab3ZXrUxEftXSSWA=",
       "workchain": -1,
       "shard": -9223372036854775808
 },
