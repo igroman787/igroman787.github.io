@@ -240,9 +240,9 @@
 		"@type": "validator.config.global",
 		"init_block": 
 		      {
-			"file_hash": "WrNoMrn5UIVPDV/ug/VPjYatvde8TPvz5v1VYHCLPh8=",
-			"seqno": 5172980,
-			"root_hash": "054VCNNtUEwYGoRe1zjH+9b1q21/MeM+3fOo76Vcjes=",
+			"file_hash": "xRaxgUwgTXYFb16YnR+Q+VVsczLl6jmYwvzhQ/ncrh4=",
+			"seqno": 5176527,
+			"root_hash": "SoPLqMe9Dz26YJPOGDOHApTSe5i0kXFtRmRh/zPMGuI=",
 			"workchain": -1,
 			"shard": -9223372036854775808
 		      },
@@ -258,6 +258,13 @@
 			"file_hash": "WrNoMrn5UIVPDV/ug/VPjYatvde8TPvz5v1VYHCLPh8=",
 			"seqno": 5172980,
 			"root_hash": "054VCNNtUEwYGoRe1zjH+9b1q21/MeM+3fOo76Vcjes=",
+			"workchain": -1,
+			"shard": -9223372036854775808
+		      }, 
+		      {
+			"file_hash": "xRaxgUwgTXYFb16YnR+Q+VVsczLl6jmYwvzhQ/ncrh4=",
+			"seqno": 5176527,
+			"root_hash": "SoPLqMe9Dz26YJPOGDOHApTSe5i0kXFtRmRh/zPMGuI=",
 			"workchain": -1,
 			"shard": -9223372036854775808
 		      }
