@@ -9,13 +9,16 @@ fi
 
 # create work dir
 work_dir=/tmp/get_adnl_pubkey
-mkdir $work_dir && cd $work_dir
+mkdir -p $work_dir && cd $work_dir
+
+# install apt package
+apt install virtualenv
 
 # create virtual environment
 virtualenv venv
 . venv/bin/activate
 
-# install package
+# install python3 package
 pip3 install PyNaCl==1.5.0
 
 wget https://raw.githubusercontent.com/igroman787/igroman787.github.io/master/get_adnl_pubkey.py
