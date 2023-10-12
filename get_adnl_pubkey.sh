@@ -12,7 +12,7 @@ work_dir=/tmp/get_adnl_pubkey
 mkdir -p $work_dir && cd $work_dir
 
 # install apt package
-apt install virtualenv
+apt install virtualenv -y
 
 # create virtual environment
 virtualenv venv
