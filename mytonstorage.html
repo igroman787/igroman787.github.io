@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Ton Storage Provider Inscriptions</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        border: #226 1px solid;
+        padding: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ton Storage Providers</h1>
+    <table id="target">
+      <tr><td>Address</td><td>Last public key</td></tr>
+    </table>
+    <script>
+      async function main() {
+        const testnet = document.location.toString().includes('testnet');
+        
+        const hexToFriendlyAddr = (workchain, hex) => {
+          let bytes = [testnet ? 0x91 : 0x11, workchain ? 0xFF : 0x00];
+          for (let i = 0; i < 32; i++)
+            bytes.push(+('0x' + hex[i*2] + hex[i*2+1]));
+          return btoa(String.fromCodePoint(...bytes));
+        };
+        const commentToPublicKey = (comment) => {
+          if (!comment || !comment.startsWith('tsp-')) return null;
+          return comment.slice(4).match(/^[a-f0-9]{64}$/);  // asserting there are only 64 hex characters remaining
+        };
+        
+        const address = 'UQB3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d0x0';
+        const endpoint = testnet ? 'https://testnet.dton.io/graphql' : 'https://dton.io/graphql';
+        const request = '{"query":"query {transactions(address_friendly: \\"' + address + '\\") {lt    in_msg_src_addr_workchain_id    in_msg_src_addr_address_hex    in_msg_comment}}"}';
+        
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          headers: {'Accept': 'application/json', 'Content-Type': 'application/json'},
+          body: request,
+        });
+        const lastTx = await response.json();
+        
+        let userComments = {};
+        for (let tx of lastTx.data.transactions) {
+          let providerKey = commentToPublicKey(tx.in_msg_comment);
+          if (!providerKey) continue;
+          
+          let src = hexToFriendlyAddr(tx.in_msg_src_addr_workchain_id,
+                                      tx.in_msg_src_addr_address_hex);
+          userComments[src] = userComments[src] || providerKey;
+        }
+        
+        const store = document.querySelector('#target>tbody');
+        for (let [addr, text] of Object.entries(userComments)) {
+          let v = '<tr><td>' + addr + '</td><td>' + text + '</td></tr>';
+          store.innerHTML += v;
+        }
+      }
+      
+      main();
+    </script>
+  </body>
+</html>
