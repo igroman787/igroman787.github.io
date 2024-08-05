@@ -28,7 +28,7 @@
             bytes.push(+('0x' + hex[i*2] + hex[i*2+1]));
 
           let reg = 0;  // CRC16 with poly=0x1021
-          for (let byte of (bytes + [0, 0])) {
+          for (let byte of bytes.concat([0, 0])) {
             let mask = 0x80;
             while (mask) {
               reg <<= 1;
@@ -41,7 +41,8 @@
           bytes.push(Math.floor(reg / 256));
           bytes.push(reg % 256);
           
-          return btoa(String.fromCodePoint(...bytes));
+          return btoa(String.fromCodePoint(...bytes))
+            .replaceAll('/', '_').replaceAll('+', '-');
         };
         const commentToPublicKey = (comment) => {
           if (!comment || !comment.startsWith('tsp-')) return null;
