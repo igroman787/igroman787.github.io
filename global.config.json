@@ -334,11 +334,11 @@
 	},
 	"liteservers": [
 		{
-			"ip": 764821513,
+			"ip": -1335706593,
 			"port": 7445,
 			"id": {
 				"@type": "pub.ed25519",
-				"key": "UqVhr7ZOk9WyemU/HZXzGf/iLJJrEELelWG7zcGD2tk="
+				"key": "1klV35VWX7T1WJx8A5FbkUWdeJsbxifqkyP31KuMugA="
 			}
 		},
 		{
