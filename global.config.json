@@ -34,6 +34,29 @@
 					"@type": "dht.node",
 					"id": {
 						"@type": "pub.ed25519",
+						"key": "nnH4k4OXNFdb3n6qMEe1dDn9+xOQLE2Bvya+D2rkMno="
+					},
+					"addr_list": {
+						"@type": "adnl.addressList",
+						"addrs": [
+							{
+								"@type": "adnl.address.udp",
+								"ip": -1185526007,
+								"port": 4007
+							}
+						],
+						"version": 1787811089,
+						"reinit_date": 1787811089,
+						"priority": 0,
+						"expire_at": 0
+					},
+					"version": 1787811089,
+					"signature": "UB7pL2TCPf3g/hw8kwmuopU3StUVMakKM6zlic6rC1YIce4fLiE49GHGy+269q7XM49pymwDesDDY/pzuSpRCQ=="
+				},
+				{
+					"@type": "dht.node",
+					"id": {
+						"@type": "pub.ed25519",
 						"key": "Fhldu4zlnb20/TUj9TXElZkiEmbndIiE/DXrbGKu+0c="
 					},
 					"addr_list": {
